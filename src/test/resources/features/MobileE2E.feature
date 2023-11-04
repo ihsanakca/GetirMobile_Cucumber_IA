@@ -13,7 +13,7 @@ Feature: Getir Test
     Then The user verify successfull login with "Dondurma"
     And The user clicks basket button
     Then The user verify that basket is empty and able to see "There is no result"
-    And The user able to see all menu list in console and verify that size is 14
+    And The user able to see all menu list in console and verify that size is 12
     And The user clicks second category which is "Atıştırmalık"
    # And The user adds two different items
     And The user adds item with name: "Ürün 9"

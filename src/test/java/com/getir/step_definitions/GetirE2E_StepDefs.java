@@ -3,6 +3,7 @@ package com.getir.step_definitions;
 import com.getir.pages.BasketPage;
 import com.getir.pages.LoginPage;
 import com.getir.utilities.ScrollHelper;
+import io.appium.java_client.android.AndroidElement;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -41,7 +42,13 @@ public class GetirE2E_StepDefs {
     @Then("The user able to see all menu list in console and verify that size is {int}")
     public void the_user_able_to_see_all_menu_list_in_console_and_verify_that_size_is(int expectedSize) {
         loginPage.waitUntil(loginPage.categoryDondurma);
+
         int actualSize = loginPage.menuList.size();
+
+//        for (AndroidElement androidElement : loginPage.menuList) {
+//            System.out.println(androidElement.getText());
+//        }
+
         Assert.assertEquals(expectedSize, actualSize);
     }
 
